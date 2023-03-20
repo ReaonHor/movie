@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>电影院.png" />
+    <title>Vue</title>
+    <script>
+      window.addEventListener("load", function () {
+        window.addEventListener("resize", function () {
+          var styleNode = document.createElement("style");
+          var w = (document.documentElement.clientWidth / 390) * 16; //获取视口大小
+          /* 设置此时根元素的fontsize，向html的style样式中添加font-size属性*/
+          styleNode.innerHTML = "html{font-size:" + w + "px!important}";
+          //向head标签中添加style标签，其中包含html{font-size:w;}
+          document.head.appendChild(styleNode);
+        });
+      });
+      // (function () {
+      //   var styleNode = document.createElement("style");
+      //   var w = (document.documentElement.clientWidth / 390) * 16; //获取视口大小
+      //   /* 设置此时根元素的fontsize，向html的style样式中添加font-size属性*/
+      //   styleNode.innerHTML = "html{font-size:" + w + "px!important}";
+      //   //向head标签中添加style标签，其中包含html{font-size:w;}
+      //   document.head.appendChild(styleNode);
+      // })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
